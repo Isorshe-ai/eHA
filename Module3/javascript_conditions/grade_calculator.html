@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Grade calculator</title>
+		<!-- Scripts -->
+			<script>
+                var grade = "Cannot be calculated"
+            var score = prompt("what is your score"); 
+            if(score >= 70){
+                grade = "A";
+            } else if(score < 70 && score >= 60){
+                grade = "B";
+            }else if(score < 60 && score >= 50){
+                grade = "C";
+            }else if(score < 50 && score >= 40){
+                grade = "D";
+            }else if(score < 40 && score >= 0){
+                grade = "F";
+            } else {
+               alert("You entered and invalid score !");
+            }
+            
+           document.write("<h1> Your Score is "+ score + " and your Grade is " + grade);
+            </script>
+	</head>
+	<body style = "padding: 50px; margin: 25 px; border: 10px solid green;">
+
+	
+	</body>
+</html>
