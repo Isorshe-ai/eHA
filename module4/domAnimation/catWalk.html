@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Challenge: Catwalk</title>
+        <style>
+            #cat {
+                position: absolute;
+                left: 0px;
+            }
+        </style>
+    </head>
+    <body>
+    <div>
+      <!--  <p> <button id = "leftt" onclick="walkTheCat()">Move me</button></p> -->
+        <!-- Cat walking GIF from: http://www.anniemation.com/clip_art/graphics.html -->
+        <img id="cat" src="https://www.kasandbox.org/programming-images/misc/cat-walk.gif">
+       
+    </div>
+
+  <script>
+  var catEl = document.getElementById("cat");
+//var leftt = document.getElementById("leftt");
+  var startTime = new Date().getTime();
+  var moveLeft = 0;
+  var walkTheCat = function() {
+
+      var currTime = new Date().getTime();
+      var secondsElapsed = ((currTime - startTime)/100);
+       catEl.style.left = secondsElapsed + "px";
+      window.requestAnimationFrame(walkTheCat);
+      //console.log(moveLeft);
+  };
+  
+walkTheCat();
+  </script>
+
+    </body>
+</html> 
